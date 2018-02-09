@@ -1,5 +1,7 @@
 # ngx-dynamic-outlet
 
+An implementation of dynamic template wrapper at Angular > 5.1.0. AoT mode support.
+
 ## Installation
 
 To install this library, run:
