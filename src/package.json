@@ -1,0 +1,28 @@
+{
+  "name": "ngx-dynamic-outlet",
+  "version": "0.2.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/repo"
+  },
+  "author": {
+    "name": "Jackclarify",
+    "email": "jack.chen@clarifyhealth.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/username/repo/issues"
+  },
+  "main": "ngx-dynamic-outlet.umd.js",
+  "module": "ngx-dynamic-outlet.js",
+  "jsnext:main": "ngx-dynamic-outlet.js",
+  "typings": "ngx-dynamic-outlet.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^5.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.5"
+  }
+}
