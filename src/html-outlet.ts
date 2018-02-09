@@ -58,7 +58,7 @@ export function createComponentFactory(compiler: Compiler, metadata: Component):
 
 @Directive({ selector: "html-outlet" })
 export class HtmlOutlet {
-    @Input() html: any;
+    @Input() html: string;
     @Input() context: DynamicTemplateContext;
     cmpRef: ComponentRef<any>;
 

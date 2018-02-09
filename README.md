@@ -35,7 +35,7 @@ import { NgxDynamicOutletModule } from 'ngx-dynamic-outlet';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    NgxDynamicOutletModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -50,7 +50,7 @@ Once your library is imported, you can use its components, directives and pipes 
 <h1>
   {{title}}
 </h1>
-<html-outlet></html-outlet>
+<html-outlet [html]="content" [context]="context" ></html-outlet>
 ```
 
 ## Development
