@@ -17,6 +17,7 @@ class AppComponent {
 	constructor(private filter: DomSanitizer) { }
 	content = `<a (click)="showQuestion(&apos;fever chills normal&apos;)">I have a fever/chills. Is this normal?</a>`;
 	// content = this.filter.bypassSecurityTrustHtml(`<a (click)="showQuestion(&apos;fever chills normal&apos;)">I have a fever/chills. Is this normal?</a>`);
+  // content = this.filter.bypassSecurityTrustHtml(``);
     context = {
         showQuestion: this.showQuestion
     };

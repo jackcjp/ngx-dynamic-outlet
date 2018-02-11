@@ -66,7 +66,7 @@ export class HtmlOutlet {
     constructor(private vcRef: ViewContainerRef, private compiler: Compiler) { }
 
     ngOnChanges() {
-        if (typeof this.html === "object" && this.html.changingThisBreaksApplicationSecurity){
+        if (typeof this.html === "object" && 'changingThisBreaksApplicationSecurity' in this.html){
             this.html = this.html.changingThisBreaksApplicationSecurity;
         }
         const html = this.html;
