@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { DomSanitizer } from "@angular/platform-browser";
 
 import { NgxDynamicOutletModule }  from 'ngx-dynamic-outlet';
 
@@ -13,7 +14,9 @@ import { NgxDynamicOutletModule }  from 'ngx-dynamic-outlet';
   template: `<html-outlet [html]="content" [context]="context" ></html-outlet>`
 })
 class AppComponent {
+	constructor(private filter: DomSanitizer) { }
 	content = `<a (click)="showQuestion(&apos;fever chills normal&apos;)">I have a fever/chills. Is this normal?</a>`;
+	// content = this.filter.bypassSecurityTrustHtml(`<a (click)="showQuestion(&apos;fever chills normal&apos;)">I have a fever/chills. Is this normal?</a>`);
     context = {
         showQuestion: this.showQuestion
     };

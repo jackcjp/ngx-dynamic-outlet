@@ -13,6 +13,7 @@ import {
 
 import { CommonModule } from "@angular/common";
 
+
 export interface DynamicTemplateContext {
   [index: string]: any;
 }
@@ -58,13 +59,16 @@ export function createComponentFactory(compiler: Compiler, metadata: Component):
 
 @Directive({ selector: "html-outlet" })
 export class HtmlOutlet {
-    @Input() html: string;
+    @Input() html: any;
     @Input() context: DynamicTemplateContext;
     cmpRef: ComponentRef<any>;
 
     constructor(private vcRef: ViewContainerRef, private compiler: Compiler) { }
 
     ngOnChanges() {
+        if (typeof this.html === "object" && this.html.changingThisBreaksApplicationSecurity){
+            this.html = this.html.changingThisBreaksApplicationSecurity;
+        }
         const html = this.html;
         if (!html) return;
 
