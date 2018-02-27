@@ -3,6 +3,8 @@ import { JitCompilerFactory } from "@angular/platform-browser-dynamic";
 import { CommonModule } from '@angular/common';
 import { HtmlOutlet } from './html-outlet';
 
+export * from './html-outlet';
+
 export function createCompiler(compilerFactory: CompilerFactory) {
     return compilerFactory.createCompiler();
 }
