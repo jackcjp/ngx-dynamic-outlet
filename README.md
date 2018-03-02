@@ -1,6 +1,6 @@
 # ngx-dynamic-outlet
 
-An implementation of dynamic template wrapper at Angular > 5.1.0. AoT mode support.
+An implementation of dynamic template wrapper at Angular > 5.1.0. AoT mode support, but the parameter --build-optimizer should be false in prod (since the decorators will be remove if --build-optimizer=true).
 
 ## Installation
 
